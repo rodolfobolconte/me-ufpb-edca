@@ -9,12 +9,14 @@ def selection_sort(lista):
     horaInicio = time.time()
 
     #execucao do selection sort
-    for i in range(len(lista)):
+    for i in range(len(lista)-1):
         T_N += 1
+        
         min = i
         
         for j in range(i+1, len(lista)):
             T_N += 1
+
             if lista[j] < lista[min]:
                 min = j
 
@@ -39,13 +41,15 @@ def insertion_sort(lista):
     horaInicio = time.time()
 
     #execucao do insertion sort
-    for i in range(len(lista)):
+    for i in range(1, len(lista)):
         T_N += 1
 
         numAtual = lista[i]
         j = i - 1
+
         while j >=0 and lista[j] > numAtual:
             T_N += 1
+            
             lista[j+1] = lista[j]
             j -= 1
 
