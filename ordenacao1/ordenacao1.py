@@ -74,7 +74,7 @@ while True:
     if not opcao: break
     
     #carrega o arquivo escolhido
-    arquivo = open('A:/OneDrive/Email Acadêmico/UFPB - Mestrado Informática/Estrutura de Dados e Complexidade de Algoritmos/Atividades/me-ufpb-edca/ordenacao1/instancias-num/' + nomeArquivo[opcao] + '.in')
+    arquivo = open('instancias-num/' + nomeArquivo[opcao] + '.in')
 
     #coloca os valores do arquivo em um array
     lista = [int(numero) for numero in arquivo.readlines()]
