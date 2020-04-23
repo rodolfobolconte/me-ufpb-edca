@@ -1,3 +1,5 @@
+import time
+
 def mergeSort(lista):
     
     tamanho = len(lista)
@@ -61,9 +63,39 @@ def particao(lista, inicio, fim):
 
     #função swap
     lista[i+1], lista[fim] = lista[fim], lista[i+1]
-    
-    return i + 1
-  
-lista = [numero for numero in range(10,0,-1)]
 
-print(quickSort(lista, 0, len(lista)-1))
+    return i + 1
+
+
+while True:
+    #dicionario com o nome de cada arquivo sem extensao
+    nomeArquivo = {1:'1000-1', 2:'1000-2', 3:'1000-3', 4:'1000-4', 5:'10000-1', 6:'10000-2', 7:'10000-3', 8:'10000-4', 9:'100000-1', 10:'100000-2', 11:'100000-3', 12:'100000-4'}
+
+    #menu de opcoes dos arquivos
+    print('\nEscolher Opção:')
+    for opcao in range(1,13):
+        print('    {}- {}'.format(opcao, nomeArquivo[opcao]))
+    opcao = int(input('Opção: '))
+    while opcao < 0 or opcao > 12:
+        opcao = int(input('Opção: '))
+
+    #encerra o script
+    if not opcao: break
+    
+    #carrega o arquivo escolhido
+    arquivo = open('instancias-num/' + nomeArquivo[opcao] + '.in')
+
+    #coloca os valores do arquivo em um array
+    lista = [int(numero) for numero in arquivo.readlines()]
+
+    
+    #calculo e execucao dos algoritmos
+    iniExecMergeSort = time.time()
+    mergeSort(lista)
+    fimExecMergeSort = time.time()
+    print('\nMERGE_SORT - Tempo de Execução: %.4f' %(fimExecMergeSort - iniExecMergeSort))
+
+    iniExecQuickSort = time.time()
+    quickSort(lista, 0, len(lista)-1)
+    fimExecQuickSort = time.time()
+    print('\nQUICK_SORT - Tempo de Execução: %.4f' %(fimExecQuickSort - iniExecQuickSort))
