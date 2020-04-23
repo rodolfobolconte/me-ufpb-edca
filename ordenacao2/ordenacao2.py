@@ -9,7 +9,6 @@ def mergeSort(lista):
 
     #retorna a lista para a função merge após fazer a divisão ser feita até ter tamanho 1
     return merge(mergeSort(lista[:meio]), mergeSort(lista[meio:]))
-    
 
 def merge(listaEsquerda, listaDireita):
 
@@ -35,7 +34,19 @@ def merge(listaEsquerda, listaDireita):
 
     return lista
 
+  
+def quickSort(lista, inicio, fim):
+    
+    if inicio < fim:
 
+        meio = particao(lista, inicio, fim)
+
+        #divide a parte esquerda
+        quickSort(lista, inicio, meio - 1)
+        #divide a parte direita
+        quickSort(lista, meio + 1, fim)
+
+    return lista
 
 def particao(lista, inicio, fim): 
     i = inicio - 1
@@ -45,20 +56,13 @@ def particao(lista, inicio, fim):
   
         if lista[j] <= pivo:
             i += 1
+            #função swap
             lista[i], lista[j] = lista[j], lista[i]
-  
+
+    #função swap
     lista[i+1], lista[fim] = lista[fim], lista[i+1]
+    
     return i + 1
-  
-def quickSort(lista, inicio, fim):
-    if inicio < fim:
-
-        meio  = particao(lista, inicio, fim)
-
-        quickSort(lista, inicio, meio - 1)
-        quickSort(lista, meio + 1, fim)
-
-    return lista
   
 lista = [numero for numero in range(10,0,-1)]
 
