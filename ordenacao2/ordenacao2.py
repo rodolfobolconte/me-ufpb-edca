@@ -35,10 +35,31 @@ def merge(listaEsquerda, listaDireita):
 
     return lista
 
-def quicksort():
-    pass
 
 
+def particao(lista, inicio, fim): 
+    i = inicio - 1
+    pivo = lista[fim]
+
+    for j in range(inicio, fim):
+  
+        if lista[j] <= pivo:
+            i += 1
+            lista[i], lista[j] = lista[j], lista[i]
+  
+    lista[i+1], lista[fim] = lista[fim], lista[i+1]
+    return i + 1
+  
+def quickSort(lista, inicio, fim):
+    if inicio < fim:
+
+        meio  = particao(lista, inicio, fim)
+
+        quickSort(lista, inicio, meio - 1)
+        quickSort(lista, meio + 1, fim)
+
+    return lista
+  
 lista = [numero for numero in range(10,0,-1)]
 
-print(mergeSort(lista))
+print(quickSort(lista, 0, len(lista)-1))
