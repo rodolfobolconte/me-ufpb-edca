@@ -1,5 +1,7 @@
-def countSort(A, B, k):
-    C = [0] * k
+def countSort(lista):
+    A = lista ; k = max(A)
+    C = [0] * k ; B = [0] * k
+
     for j in range(1, len(A)):
         C[A[j]] = C[A[j]] + 1
     #
@@ -15,7 +17,7 @@ def countSort(A, B, k):
 def countSortSimplificado(lista):
     tamanho = len(lista)
 
-    listaOrdenada = [ 0 for x in range(tamanho)]
+    listaOrdenada = [0] * tamanho
 
     for i in range(tamanho):
         contador = tamanho - 1
@@ -43,10 +45,34 @@ def radixSort(lista):
     
     return lista
 
+lista = [10,9,8,7,6,5,4,3,2,1]
 
-A = [10,9,8,7,6,5,4,3,2,1]
-B = [10,9,8,7,6,5,4,3,2,1]
-radixLista = [329,457,657,839,436,720,355]
+print(countSort(lista))
+print(countSortSimplificado(lista))
+exit()
 
-#print(countSort(A, B, max(A)))
-print(radixSort(radixLista))
+
+while True:
+    #dicionario com o nome de cada arquivo sem extensao
+    nomeArquivo = {1:'3digitos-1', 2:'3digitos-2', 3:'4digitos-1', 4:'4digitos-2', 5:'5digitos-1', 6:'5digitos-2'}
+
+    #menu de opcoes dos arquivos
+    print('\nEscolher Opção:')
+    for opcao in range(1,len(nomeArquivo)+1):
+        print('    {}- {}'.format(opcao, nomeArquivo[opcao]))
+    opcao = int(input('Opção: '))
+    while opcao < 0 or opcao > 12:
+        opcao = int(input('Opção: '))
+
+    #encerra o script
+    if not opcao: break
+
+    #carrega o arquivo escolhido
+    arquivo = open('instancias-num/' + nomeArquivo[opcao] + '.in')
+
+    #coloca os valores do arquivo em um array
+    lista = [int(numero) for numero in arquivo.readlines()]
+
+    #execucao dos algoritmos de ordenacao
+    countSort(lista)
+    radixSort(lista)
