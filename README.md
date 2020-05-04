@@ -2,7 +2,7 @@
 ### Curso de Pós-Graduação em Informática (Mestrado)
 ### Universidade Federal da Paraíba (UFPB)
 
-Repositório com Arquivos e Atividades Realizadas na Disciplina de Estrutura de Dados e Complexidade de Algoritmos do Curso de Pós-Graduação em Informática da Universidade Federal da Paraíba (UFPB) com o Professor Gilberto Farias.
+Repositório com Arquivos e Atividades Realizadas na Disciplina de Estrutura de Dados e Complexidade de Algoritmos do Curso de Pós-Graduação em Informática da Universidade Federal da Paraíba (UFPB) com o Professor [Gilberto Farias](http://lattes.cnpq.br/1129941438253617).
 
 Lista de Atividades:
 
