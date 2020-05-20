@@ -9,3 +9,4 @@ Lista de Atividades:
 - [Ordenação 1](https://github.com/rodolfobolconte/me-ufpb-edca/tree/master/ordenacao1): Algoritmos Iterativos, [Insertion Sort](https://pt.wikipedia.org/wiki/Insertion_sort) e [Selection Sort](https://pt.wikipedia.org/wiki/Selection_sort);
 - [Ordenação 2](https://github.com/rodolfobolconte/me-ufpb-edca/tree/master/ordenacao2): Algoritmos de Divisão e Conquista, [Merge Sort](https://pt.wikipedia.org/wiki/Merge_sort) e [Quick Sort](https://pt.wikipedia.org/wiki/Quicksort);
 - [Ordenação 3](https://github.com/rodolfobolconte/me-ufpb-edca/tree/master/ordenacao3): Algoritmos de Ordenação Lineares, [Count Sort](https://pt.wikipedia.org/wiki/Counting_sort) e [Radix Sort](https://pt.wikipedia.org/wiki/Radix_sort);
+- [Ordenação 4](https://github.com/rodolfobolconte/me-ufpb-edca/tree/master/ordenacao4): Algoritmo de Fila de Prioridade, [Heap Sort](https://pt.wikipedia.org/wiki/Heapsort);
